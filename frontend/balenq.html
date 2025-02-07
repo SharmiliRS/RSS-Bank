@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Enquiry</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Navbar will be loaded here -->
+
+    <div class="balcontainer">
+        <h2>🔍 Balance Enquiry</h2>
+        <p>Enter your Account Number to check your current balance.</p>
+
+        <input type="text" id="acc_no" placeholder="Enter Account Number">
+        <button onclick="checkBalance()">Check Balance</button>
+
+        <div id="balance-result"></div>
+    </div>
+
+    <script>
+        // Load Navbar
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+</body>
+</html>

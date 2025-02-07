@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Bank - Home</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to MyBank</h1>
+        <p>Your Trusted Partner in Banking</p>
+        <a href="/frontend/openacc.html" class="btn">Open an Account</a>
+    </section>
+
+    <!-- Bank Services -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <h3>Secure Banking</h3>
+                <p>We ensure top-level security for all transactions and account management.</p>
+            </div>
+            <div class="service-card">
+                <h3>Fund Transfer</h3>
+                <p>Seamless fund transfers with quick processing and high security.</p>
+            </div>
+            <div class="service-card">
+                <h3>24/7 Customer Support</h3>
+                <p>Our support team is always available to assist with your banking needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MyBank. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Load Navbar
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+</body>
+</html>

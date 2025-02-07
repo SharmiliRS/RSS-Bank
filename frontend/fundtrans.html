@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Transfer</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Navbar will be loaded here -->
+
+    <div class="fundcontainer">
+        <h2>💸 Fund Transfer</h2>
+        <p>Securely transfer funds between accounts.</p><br>
+        <label>Sender Account Number</label>
+        <input type="text" id="sender_acc" placeholder="Sender Account Number">
+        <label>Receiver Account Number</label>
+        <input type="text" id="receiver_acc" placeholder="Receiver Account Number"><br>
+        <label>Amount</label>
+        <input type="number" id="amount" placeholder="Enter Amount" min="1">
+
+        <button onclick="transferFunds()">Transfer Money</button>
+
+        <div id="transfer-result"></div>
+    </div>
+
+    <script>
+        // Load Navbar
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+</body>
+</html>
